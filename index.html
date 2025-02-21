@@ -26,14 +26,14 @@
         .invitation {
             background: rgba(255, 182, 193, 0.6); /* Glassy effect with transparency */
             max-width: 90%;
-            width: 350px;
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
-            border: 3px solid rgba(255, 105, 180, 0.5);
+            width: 280px;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+            border: 2px solid rgba(255, 105, 180, 0.5);
             text-align: center;
             position: relative;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px);
         }
 
         h1, p, ul li {
@@ -41,31 +41,31 @@
         }
 
         h1 {
-            font-size: 1.5em;
+            font-size: 1.3em;
             color: #d63384;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 10px;
+            letter-spacing: 1.2px;
+            margin-bottom: 8px;
         }
 
         #countdown {
-            font-size: 0.9em;
+            font-size: 0.8em;
             font-weight: bold;
             color: #d63384;
             text-align: center;
-            margin-top: 10px;
-            padding: 8px;
+            margin-top: 8px;
+            padding: 6px;
             background: white;
-            border-radius: 10px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .watch-icon {
-            font-size: 1em;
+            font-size: 0.9em;
         }
 
         .raindrop {
@@ -123,14 +123,14 @@
             document.body.appendChild(raindrop);
             
             raindrop.style.left = Math.random() * window.innerWidth + 'px';
-            raindrop.style.animationDuration = (Math.random() * 2 + 1.5) + 's';
+            raindrop.style.animationDuration = (Math.random() * 1.5 + 1) + 's';
             
             setTimeout(() => {
                 raindrop.remove();
-            }, 3000);
+            }, 2500);
         }
 
-        setInterval(createRaindrop, 80);
+        setInterval(createRaindrop, 60);
 
         function updateCountdown() {
             const eventDate = new Date('February 28, ' + new Date().getFullYear() + ' 18:00:00');
