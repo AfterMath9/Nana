@@ -20,10 +20,11 @@
         }
 
         .invitation {
-            background: rgba(255, 182, 193, 0.6); /* Glassy effect with transparency */
-            max-width: 500px;
-            margin: 40px auto;
-            padding: 20px;
+            background: rgba(255, 182, 193, 0.6);
+            max-width: 90%;
+            width: 400px;
+            margin: 20px auto;
+            padding: 15px;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
             border: 3px solid rgba(255, 105, 180, 0.5);
@@ -37,7 +38,7 @@
         }
 
         h1 {
-            font-size: 1.8em;
+            font-size: 1.5em;
             color: #d63384;
             font-weight: bold;
             text-transform: uppercase;
@@ -47,12 +48,12 @@
         }
 
         #countdown {
-            font-size: 1em;
+            font-size: 0.9em;
             font-weight: bold;
             color: #d63384;
             text-align: center;
             margin-top: 10px;
-            padding: 10px;
+            padding: 8px;
             background: white;
             border-radius: 10px;
             display: flex;
@@ -62,7 +63,7 @@
         }
 
         .watch-icon {
-            font-size: 1.2em;
+            font-size: 1em;
         }
 
         .raindrop {
@@ -79,6 +80,16 @@
         @keyframes fall {
             to {
                 transform: translateY(100vh);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .invitation {
+                width: 90%;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.2em;
             }
         }
     </style>
@@ -120,14 +131,14 @@
             document.body.appendChild(raindrop);
             
             raindrop.style.left = Math.random() * window.innerWidth + 'px';
-            raindrop.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            raindrop.style.animationDuration = (Math.random() * 1.5 + 1.5) + 's';
             
             setTimeout(() => {
                 raindrop.remove();
-            }, 5000);
+            }, 2000);
         }
 
-        setInterval(createRaindrop, 100);
+        setInterval(createRaindrop, 50);
 
         function updateCountdown() {
             const eventDate = new Date('February 28, ' + new Date().getFullYear() + ' 18:00:00');
