@@ -9,12 +9,12 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: url('download.png') no-repeat center center fixed;
+            background: url('https://i.imgur.com/6DuUo70.jpeg') no-repeat center center fixed;
             background-size: cover;
             color: #5a3d5c;
             margin: 0;
             padding: 0;
-            direction: ltr; 
+            direction: ltr;
             overflow: hidden;
             backdrop-filter: blur(10px);
             display: flex;
@@ -24,11 +24,9 @@
         }
 
         .invitation {
-            background: rgba(255, 182, 193, 0.6); /* Glassy effect with transparency */
-            width: 95%;
-            max-width: 350px;
-            height: auto;
-            max-height: 90vh;
+            background: rgba(255, 182, 193, 0.6);
+            width: 90%;
+            max-width: 320px;
             padding: 12px;
             border-radius: 12px;
             box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
@@ -36,15 +34,12 @@
             text-align: center;
             position: relative;
             backdrop-filter: blur(8px);
-            overflow-y: auto;
         }
 
         @media (max-width: 480px) {
             .invitation {
                 width: 90%;
-                max-width: 300px;
-                height: auto;
-                max-height: 85vh;
+                max-width: 280px;
             }
         }
 
@@ -135,14 +130,14 @@
             document.body.appendChild(raindrop);
             
             raindrop.style.left = Math.random() * window.innerWidth + 'px';
-            raindrop.style.animationDuration = (Math.random() * 1.5 + 1) + 's';
+            raindrop.style.animationDuration = (Math.random() * 1.2 + 0.8) + 's';
             
             setTimeout(() => {
                 raindrop.remove();
-            }, 2500);
+            }, 2000);
         }
 
-        setInterval(createRaindrop, 60);
+        setInterval(createRaindrop, 50);
 
         function updateCountdown() {
             const eventDate = new Date('February 28, ' + new Date().getFullYear() + ' 18:00:00');
